@@ -36,14 +36,9 @@
                     <th></th>
                     <th><label for="naem">Book Name: </label>
                         <select name="name" id="name">
-                        <?php
-                        $array = json_decode(json_encode($books), true); //object to array
-                        // $array = array_unique($array);
-                        foreach($books as $r):
-                        
-                        ?>
-                            <option value=""><?php echo $r->name; ?></option>
-                        <?php endforeach; ; ?><textarea name="" id="" cols="30" rows="10" placeholder=""<?php  print_r($array); ?>></textarea>
+                        <?php foreach($books as $r): ?>
+                            <option value="<?php echo $r->ID; ?>"><?php echo $r->name; ?></option>
+                        <?php endforeach ?>
                     </select></th>
                     <th>Price</th>
                     <th>Author</th>

@@ -18,6 +18,10 @@ class Books_Model extends CI_Model
         $query = $this->db->query('select from books where ID');
      }
 
+
+     public function getUniqueData(){
+         
+     }
     //  public function getData($id = false){
     //       if($id==false){
     //           return $this->findAll();
