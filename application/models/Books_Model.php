@@ -19,8 +19,13 @@ class Books_Model extends CI_Model
      }
 
 
-     public function getUniqueData(){
-         
+     public function getUniqueData($val){
+        $this->db->select($val);
+        $this->db->distinct();
+        $query = $this->db->get('books');
+        return $query->result();
+        // print_r($query);
+
      }
     //  public function getData($id = false){
     //       if($id==false){

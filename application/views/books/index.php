@@ -36,15 +36,35 @@
                     <th></th>
                     <th><label for="naem">Book Name: </label>
                         <select name="name" id="name">
-                        <?php foreach($books as $r): ?>
-                            <option value="<?php echo $r->ID; ?>"><?php echo $r->name; ?></option>
+                        <?php foreach($name as $n): ?>
+                            <option value=""><?php echo $n->name; ?></option>
                         <?php endforeach ?>
                     </select></th>
-                    <th>Price</th>
-                    <th>Author</th>
-                    <th>Publisher</th>
-                    <th>Rating</th>
-                    <th>Action</th>
+                    <th><label for="price">Price: </label>
+                        <select name="price" id="price">
+                        <?php foreach($price as $pri): ?>
+                            <option value=""><?php echo $pri->price; ?></option>
+                        <?php endforeach ?>
+                    </select></th>
+                    <th><label for="author">Author: </label>
+                        <select name="author" id="author">
+                        <?php foreach($author as $aut): ?>
+                            <option value=""><?php echo $aut->author; ?></option>
+                        <?php endforeach ?>
+                    </select></th>
+                    <th><label for="publisher">Publisher: </label>
+                        <select name="publisher" id="publisher">
+                        <?php foreach($publisher as $pub): ?>
+                            <option value=""><?php echo $pub->publisher; ?></option>
+                        <?php endforeach ?>
+                    </select></th>
+                    <th><label for="rating">Rating: </label>
+                        <select name="rating" id="rating">
+                        <?php foreach($rating as $rat): ?>
+                            <option value=""><?php echo $rat->rating; ?></option>
+                        <?php endforeach ?>
+                    </select></th>
+                    <th></th>
                 </tr>
                 <tr>
                     <th>S.NO.</th>

@@ -12,9 +12,12 @@ class Books extends CI_Controller
      {
           $data = new Books_Model();
           $book['books'] = $data->get_books();
+          $book['name'] = $data->getUniqueData('name');
+          $book['author'] = $data->getUniqueData('author');
+          $book['publisher'] = $data->getUniqueData('publisher');
+          $book['rating'] = $data->getUniqueData('rating');
+          $book['price'] = $data->getUniqueData('price');
           
-          
-          // print_r($book);
           $this->load->view("books/index.php", $book);
      }
      public function export(){
