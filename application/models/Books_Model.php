@@ -12,6 +12,12 @@ class Books_Model extends CI_Model
         return $query->result();
      }
 
+
+//get value by id.
+     public function getDataByID($id){
+        $query = $this->db->query('select from books where ID');
+     }
+
     //  public function getData($id = false){
     //       if($id==false){
     //           return $this->findAll();

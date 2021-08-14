@@ -23,8 +23,9 @@
 
             <label for="price">Price</label>
             <input type="text" name="price" id="price" class="form-control">
-            
+
             <button type="submit">Update</button>
+            
         </form>
     </div>
 </body>

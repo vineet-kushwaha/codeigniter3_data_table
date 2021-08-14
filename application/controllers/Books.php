@@ -90,14 +90,20 @@ class Books extends CI_Controller
         }
     }
 
+
+    //read function get value from db and sant it to update page.
     public function readData($id){
         echo 'hello'.$id;
     }
 
+
+    //update function
     public function update(){
         $this->load->view('books/update');
     }
 
+
+//search function
     public function search(){
         return $responce = array(
             'data'=>[

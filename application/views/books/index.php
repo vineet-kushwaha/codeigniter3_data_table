@@ -23,7 +23,7 @@
     <table class="container table">
         <tr class="table-row">
             <td>
-                <input type='text' id='searchByName' placeholder='Enter name'>
+                
             </td>
         </tr>
     </table>
@@ -32,6 +32,25 @@
 
         <table id="example" class="display" style="width:100%">
             <thead>
+            <tr>
+                    <th></th>
+                    <th><label for="naem">Book Name: </label>
+                        <select name="name" id="name">
+                        <?php
+                        $array = json_decode(json_encode($books), true); //object to array
+                        // $array = array_unique($array);
+                        foreach($books as $r):
+                        
+                        ?>
+                            <option value=""><?php echo $r->name; ?></option>
+                        <?php endforeach; ; ?><textarea name="" id="" cols="30" rows="10" placeholder=""<?php  print_r($array); ?>></textarea>
+                    </select></th>
+                    <th>Price</th>
+                    <th>Author</th>
+                    <th>Publisher</th>
+                    <th>Rating</th>
+                    <th>Action</th>
+                </tr>
                 <tr>
                     <th>S.NO.</th>
                     <th>Book Name</th>
@@ -45,6 +64,7 @@
             <tbody>
                 <?php $i = 1;
                 foreach ($books as $r) : ?>
+                
                     <tr>
                         <td><?php echo $i; ?></td>
                         <td><?php echo $r->name; ?></td>
