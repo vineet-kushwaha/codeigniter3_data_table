@@ -94,6 +94,10 @@ class Books extends CI_Controller
         echo 'hello'.$id;
     }
 
+    public function update(){
+        $this->load->view('books/update');
+    }
+
     public function search(){
         return $responce = array(
             'data'=>[
